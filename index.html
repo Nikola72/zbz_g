@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        #lab {
+            margin: 100px auto;
+            width: 600px;
+            height: 500px;
+            background-color: #050210;
+            position: relative;
+        }
+
+        #krug0 {
+            left: 125px;
+            width: 350px;
+            height: 350px;
+            margin: 75px auto;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            position: absolute;
+
+            animation-name: rotir;
+            animation-duration: 0.5s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+            filter: blur(30px);
+
+            animation-name: rotir2;
+            animation-duration: 0.5s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+        }
+
+        #krug1 {
+            left: 150px;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            position: absolute;
+
+            animation-name: rotir;
+            animation-duration: 0.5s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+
+        }
+
+        #krug2 {
+            width: 260px;
+            height: 260px;
+            position: absolute;
+            background-color: black;
+            border-radius: 100%;
+            top: 120px;
+            left: 170px;
+        }
+
+        #krug3::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            left: 299px;
+            top: 249px;
+            background-color: rgb(36, 3, 49);
+            border-radius: 100%;
+
+            animation-name: rotir3;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+            animation-fill-mode: both;
+        }
+
+        @keyframes rotir {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes rotir2 {
+            0% {
+                transform: rotateZ(0deg)
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes rotir3 {
+            0% {
+                transform-origin: 50% 50% 0;
+                width: 2px;
+                height: 2px;
+            }
+
+            100% {
+                transform: scale(130, 130);
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="lab">
+        <div id="krug0"></div>
+        <div id="krug1"></div>
+        <div id="krug2"></div>
+        <div id="krug3"></div>
+    </div>
+</body>
+</html>
